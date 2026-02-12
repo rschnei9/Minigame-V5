@@ -9,10 +9,12 @@ public class PlayerControl : MonoBehaviour
     private float Ymin = -3.5f;
     private float Ymax = 3.5f;
 
+    public SpriteRenderer sr;
+
     public Sprite [] Players;
     public GameObject [] Shots;
 
-    public int Ship;
+    public int ship;
 
     // Update is called once per frame
     void Update()
@@ -40,9 +42,28 @@ public class PlayerControl : MonoBehaviour
         if (transform.position.y > Ymax) {
             transform.position = new Vector3(transform.position.x, Ymax);
         }
-    
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.L))
         {
+            ship += 1;
+            if (ship < 0)
+            {
+                ship = 4;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            ship -= 1;
+            if (ship > 4)
+            {
+                ship = 0;
+            }
+        }
+        sr.sprite = Players[ship];
+
+    
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+
             //Shoots something, yet to determine how it switches projectiles other -
             // - than it needing to switch sprites with a press of a key, allowing it to shoot different projectiles
             //Instantiate(projectilePrefab, transform.position,  projectilePrefab.transform.rotation);
