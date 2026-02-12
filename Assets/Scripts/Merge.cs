@@ -6,7 +6,7 @@ private float speed = 3.0f;
 private float rotate = -100.0f;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Note: The spinning cosmetic is needed for this sprite too!
         transform.Translate (Vector3.right * speed * Time.deltaTime);
