@@ -4,9 +4,9 @@ public class EnemyFunction : MonoBehaviour
 {
     public float horizontalInput;
     //private float speed = -4.0f;
-    private float speed = -4.0f;
+    private float speed = -0.0f;
     //private float vspeed = 1.0f;
-    private float vspeed = 1.0f;
+    private float vspeed = 0.0f;
     private float Xmin = 12.0f;
     private float Xmax = 7.0f;
     private float Ymin = -3.5f;

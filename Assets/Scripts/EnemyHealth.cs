@@ -8,10 +8,11 @@ public class EnemyHealth : MonoBehaviour
     {
 Debug.Log("CheckEDAMAGE");
 	health -= edamage;
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-Debug.Log("ZIPTAG");
+Debug.Log("Zip");
         if (other.CompareTag("Zip"))
 
         {
@@ -24,7 +25,6 @@ Debug.Log("ZIPTAG");
         {
             Destroy(gameObject);
         }
-    }
     }
     
 }
