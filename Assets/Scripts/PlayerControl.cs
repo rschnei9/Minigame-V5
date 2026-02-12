@@ -63,7 +63,7 @@ public class PlayerControl : MonoBehaviour
     
         if (Input.GetKeyDown(KeyCode.K))
         {
-
+            Instantiate(Shots[ship],transform.position+Vector3.right, transform.rotation);
             //Shoots something, yet to determine how it switches projectiles other -
             // - than it needing to switch sprites with a press of a key, allowing it to shoot different projectiles
             //Instantiate(projectilePrefab, transform.position,  projectilePrefab.transform.rotation);
