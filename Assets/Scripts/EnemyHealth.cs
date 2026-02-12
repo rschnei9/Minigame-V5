@@ -20,6 +20,35 @@ Debug.Log("Zip");
             Destroy(other.gameObject);
             Damage(10);
         }
+if (other.CompareTag("MergeB"))
+
+        {
+		Debug.Log("Enemyharm");
+            Destroy(other.gameObject);
+            Damage(5);
+        }
+if (other.CompareTag("Split"))
+
+        {
+		Debug.Log("Enemyharm");
+            Destroy(other.gameObject);
+            Damage(7);
+        }
+if (other.CompareTag("Rocket"))
+
+        {
+		Debug.Log("Enemyharm");
+            Destroy(other.gameObject);
+	int sdmg = (int)other.GetComponent<"Rocket">().speed;
+            Damage(sdmg);
+        }
+if (other.CompareTag("Boom"))
+
+        {
+		Debug.Log("Enemyharm");
+            Destroy(other.gameObject);
+            Damage(10);
+        }
 
         if (health <= 0)
         {

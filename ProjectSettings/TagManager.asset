@@ -7,6 +7,9 @@ TagManager:
   - MergeB
   - Blast
   - Zip
+  - Split
+  - Rocket
+  - Boom
   layers:
   - Default
   - TransparentFX

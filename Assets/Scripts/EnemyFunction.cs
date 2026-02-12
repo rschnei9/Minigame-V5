@@ -12,8 +12,6 @@ public class EnemyFunction : MonoBehaviour
     private float Ymin = -3.5f;
     private float Ymax = 3.5f;
 
-    public int health = 50;
-
 void Update()
     {
         //Player movement translation
