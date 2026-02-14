@@ -9,6 +9,6 @@ private float speed = -3.0f;
     }
     void Start()
     {
-        Destroy(gameObject, 15f);
+        Destroy(gameObject, 12.2f);
     }
 }

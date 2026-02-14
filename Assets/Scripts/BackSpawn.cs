@@ -1,20 +1,28 @@
 using UnityEngine;
 
-public class BackSpawn : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
-    private float spawnPosX = 19;
-    private float spawnInterval = 15f;
-    
-    void Start()
-    {
-        //I need this script to summon a background using "spawnInterval" as a timer
-        //Call InvokeRepeating = "SpawnBack"; spawnInterval;
-    }
+
+    public GameObject[] Space;
+    private float startDelay = 0;
+    private float spawnInterval = 6f;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame
-    void SpawnBack()
-    {
-        Vector3 spawnPosX = new Vector3(19, 0, 0);
-        Instantiate(gameObject);
-    }
+    void Update()
+     {
+
+     }
+void Start () {
+    InvokeRepeating("Spacer", startDelay, spawnInterval);
+}
+
+ void Spacer()
+     {
+        int Ranged = Random.Range(0, Space.Length);
+           Vector3 spawnPos = new Vector3(19.5f, 0, 0);
+
+           Instantiate(Space[Ranged], spawnPos, Space[Ranged].transform.rotation);
+}
 }

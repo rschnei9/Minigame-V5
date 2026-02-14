@@ -84,7 +84,7 @@ PrefabInstance:
     - target: {fileID: 5128143286857532040, guid: ad368136563986543a5a972d52654dc2, type: 3}
       propertyPath: Boomifier
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1199863234085589269, guid: 447c446c52a785f4cbe5dc01a9ca9d96, type: 3}
     - target: {fileID: 8384561576755243552, guid: ad368136563986543a5a972d52654dc2, type: 3}
       propertyPath: m_Name
       value: Merge_0

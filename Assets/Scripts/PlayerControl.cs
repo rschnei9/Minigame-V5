@@ -60,13 +60,28 @@ public class PlayerControl : MonoBehaviour
         }
         sr.sprite = Players[ship];
 
-    
+    //THIS SECTION NEEDS TO HAVE IF/ELSE statements for each projectile having DIFFERENT RATES OF FIRE
         if (Input.GetKeyDown(KeyCode.K))
         {
+            if (ship == 0)
+            //I want the white beam to follow the nose of the ship while it moves before despawning
+
+            //I also want to add a recharge script for the white electric icon that allows this to be fired once every 30 seconds.
+            //It acts as an indicator for when the charge beam is ready. Its on by default and only gets disabled after a use.
             Instantiate(Shots[ship],transform.position+Vector3.right, transform.rotation);
-            //Shoots something, yet to determine how it switches projectiles other -
-            // - than it needing to switch sprites with a press of a key, allowing it to shoot different projectiles
-            //Instantiate(projectilePrefab, transform.position,  projectilePrefab.transform.rotation);
+
+
+            else if (ship == 3)
+            //I want the split to shoot in a burst of 3 quick shots
+            Instantiate(Shots[ship],transform.position+Vector3.right, transform.rotation);
+            //Instantiate(Shots[ship],transform.position+Vector3.right, transform.rotation);
+            //Instantiate(Shots[ship],transform.position+Vector3.right, transform.rotation);
+
+            
+            else
+            {
+            Instantiate(Shots[ship],transform.position+Vector3.right, transform.rotation);
+            }
         }
 
         
