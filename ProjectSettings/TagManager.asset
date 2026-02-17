@@ -10,6 +10,7 @@ TagManager:
   - Split
   - Rocket
   - Boom
+  - Beam
   layers:
   - Default
   - TransparentFX

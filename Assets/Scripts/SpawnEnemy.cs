@@ -1,16 +1,22 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    private bool spawn;
+    public GameObject Enemyfab;
     void Update()
     {
-        
+        if (spawn == false)
+        {
+            StartCoroutine("Spawn");
+        }
+    }
+    IEnumerator Spawn()
+    {
+        spawn = true;
+        Instantiate(Enemyfab, transform.position + Vector3.right, transform.rotation);
+        yield return new WaitForSeconds(Random.Range(1,5));
+        spawn = false;
     }
 }

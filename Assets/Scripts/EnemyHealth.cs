@@ -53,6 +53,12 @@ if (other.CompareTag("Boom"))
         {
             Destroy(gameObject);
         }
+        if (other.CompareTag("Beam"))
+
+        {
+            Debug.Log("Beamed");
+            Damage(1);
+        }
     }
     
 }
