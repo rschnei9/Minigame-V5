@@ -5,9 +5,9 @@ public class EnemyFunction : MonoBehaviour
 {
     public float horizontalInput;
     //private float speed = -4.0f;
-    private float speed = -4.0f;
+    private float speed = -5.0f;
     //private float vspeed = 1.0f;
-    private float uspeed = 1.0f;
+    private float uspeed = 0.0f;
     private float Xmin = 12.0f;
     private float Xmax = 7.0f;
     private float Ymin = -3.5f;
@@ -25,7 +25,7 @@ public class EnemyFunction : MonoBehaviour
         }
         if (Ismoving == false)
         {
-            StartCoroutine("Movement", Random.Range(-1,2));
+            StartCoroutine("Movement", Random.Range(-2,3));
         }
         transform.Translate(Vector3.right * speed * Time.deltaTime);
         transform.Translate(Vector3.up * uspeed * Time.deltaTime);
@@ -64,7 +64,7 @@ public class EnemyFunction : MonoBehaviour
     IEnumerator Movement(int Direction)
     {
         Ismoving = true;
-        yield return new WaitForSeconds(Random.Range(3,8));
+        yield return new WaitForSeconds(Random.Range(1,3));
         uspeed = Direction;
         Ismoving = false;
     }

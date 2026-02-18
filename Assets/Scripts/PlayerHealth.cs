@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 3;
+    public int health = 7;
     public SpriteRenderer[] hearts;
     public Sprite red;
     public Sprite black;
@@ -25,6 +25,13 @@ public class PlayerHealth : MonoBehaviour
             Destroy(collision.gameObject);
             Debug.Log("Youch");
             Damage(1);
+        }
+
+        if (collision.CompareTag("Heal") && health <= 6)
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("TYay");
+            Damage(-1);
         }
 
         if (health <= 0)

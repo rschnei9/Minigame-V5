@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Blast : MonoBehaviour
+public class Heal : MonoBehaviour
 {
-    private float speed = -14.0f;
+    private float speed = -7.0f;
 
     // Update is called once per frame
     void Update()
@@ -11,7 +11,7 @@ public class Blast : MonoBehaviour
     }
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 6f);
     }
 
 }

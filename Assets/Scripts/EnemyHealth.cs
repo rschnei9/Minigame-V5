@@ -18,7 +18,7 @@ Debug.Log("Zip");
         {
 		Debug.Log("Zipped");
             Destroy(other.gameObject);
-            Damage(10);
+            Damage(7);
         }
 if (other.CompareTag("MergeB"))
 
@@ -32,7 +32,7 @@ if (other.CompareTag("Split"))
         {
 		Debug.Log("Splid");
             Destroy(other.gameObject);
-            Damage(7);
+            Damage(8);
         }
 if (other.CompareTag("Rocket"))
 
@@ -46,18 +46,19 @@ if (other.CompareTag("Boom"))
 
         {
 		Debug.Log("Blam");
-            Damage(49);
+            Damage(25);
         }
 
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-        if (other.CompareTag("Beam"))
+if (other.CompareTag("Beam"))
 
         {
             Debug.Log("Beamed");
-            Damage(1);
+            Damage(50);
+        }
+
+if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
     
